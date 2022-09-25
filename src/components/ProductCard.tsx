@@ -14,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <>
         <Card
             sx={{
-                maxWidth: 345
+                maxWidth: 400
             }}
         >
             <CardMedia>
