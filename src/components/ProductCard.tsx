@@ -11,6 +11,7 @@ import React from "react";
 import { ProductCardProps } from "../models/models";
 import CartContext from "../contexts/CartContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 const ProductCard: React.FC<ProductCardProps> = ({
   productTitle,
@@ -24,11 +25,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <>
       <Card
         sx={{
-          maxWidth: 400,
+          maxWidth: 400
         }}
       >
         <CardMedia>
-          <img src={productMainImageURL} alt={productTitle} width="100%" />
+          <Link to={`product/${productId}`}>
+          <img 
+          src={productMainImageURL} 
+          alt={productTitle} 
+          width="100%" 
+          style={{
+            cursor: 'pointer'
+          }}
+          />
+          </Link>
         </CardMedia>
         <CardContent>
           <Typography>{productTitle}</Typography>
