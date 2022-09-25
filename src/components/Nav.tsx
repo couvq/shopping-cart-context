@@ -2,8 +2,11 @@ import { AppBar, IconButton, Toolbar } from "@mui/material";
 import React from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
+import CartContext from "../contexts/CartContext";
+import { useContext } from "react";
 
 const Nav: React.FC = () => {
+  const {items} = useContext(CartContext);
   return (
     <>
       <AppBar>
@@ -32,7 +35,7 @@ const Nav: React.FC = () => {
                   marginRight: ".3rem"
                 }}
               >
-                5
+                {items.length}
               </span>
               <ShoppingCartIcon />
             </IconButton>

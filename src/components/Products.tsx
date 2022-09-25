@@ -12,8 +12,6 @@ const Products: React.FC = () => {
     getTodaysDeals().then((data) => setTodaysDeals(data));
   }, []);
 
-  console.log(todaysDeals)
-
   return (
     <>
       <Box
@@ -31,12 +29,7 @@ const Products: React.FC = () => {
         >
           Our Products
         </Typography>
-        <Stack 
-        direction="row" 
-        spacing={2} 
-        flexWrap="wrap"
-        width="100%"
-        >
+        <Stack direction="row" spacing={2} flexWrap="wrap" width="100%">
           {todaysDeals.map((deal: any) => (
             <ProductCard
               productTitle={deal?.product_title}
