@@ -5,7 +5,7 @@ import Products from './components/Products';
 import Checkout from './components/Checkout';
 import ProductDetails from './components/ProductDetails';
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
       <BrowserRouter>
