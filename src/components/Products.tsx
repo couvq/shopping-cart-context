@@ -5,9 +5,9 @@ import { getTodaysDeals } from "../utils/getTodaysDeals";
 const Products: React.FC = () => {
   const [todaysDeals, setTodaysDeals] = useState([]);
 
-  useEffect(() => {
-    getTodaysDeals().then((data) => console.log(data));
-  }, []);
+//   useEffect(() => {
+//     getTodaysDeals().then((data) => setTodaysDeals(data));
+//   }, []);
 
   return <div>Products</div>;
 };
